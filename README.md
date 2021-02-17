@@ -6,5 +6,5 @@ Diseñado por la agencia CyberCenter, se desarrollo este layout para la empresa 
 ### Inicio
 ![Alt text](https://github.com/javierGnz/ferreteria/blob/main/screenshots/home.jpeg "Home")
 
-### Inicio - Mobile Version
-![Alt text](https://github.com/javierGnz/ferreteria/blob/main/screenshots/home--mobile.jpeg "Home Mobile")
+### Categorias
+![Alt text](https://github.com/javierGnz/ferreteria/blob/main/screenshots/categorias.jpeg "Categorias")
