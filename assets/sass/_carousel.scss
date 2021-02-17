@@ -1,0 +1,292 @@
+.carousel {
+    position: relative;
+
+    &__product {
+        position: relative;
+        min-height: 395px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        padding: 0 15px 30px;
+        transition: all 0.3s linear;
+        border: 1px solid lighten($color-secondary-lighter, 4%);
+        @include respond-up(lg) {
+            min-height: 500px;
+        }
+
+        &:focus,
+        &:hover {
+            box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+            @include respond-up(xs) {
+                bottom: -18px;
+            }
+
+            @include respond-up(md) {
+                bottom: -20px;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        height: 175px;
+        margin-right: -15px;
+        margin-left: -15px;
+        @include respond-up(xs) {
+            height: 253px;
+        }
+
+        > img {
+            width: auto !important;
+            max-width: 100%;
+            max-height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+
+    &__title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        min-height: 65px;
+
+        @media (min-width: 375px) {
+            min-height: 80px;
+        }
+
+        a {
+            display: block;
+            color: $color-base;
+            font-size: 16px;
+            font-weight: 700;
+            @include respond-up(sm) {
+                font-size: 18px;
+            }
+
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+
+            small {
+                display: block;
+                color: inherit;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__info {
+        position: relative;
+
+        small {
+            display: block;
+            color: $color-base;
+            font-size: 14px;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .social-share {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @media (min-width: 375px) {
+                right: -13px;
+            }
+
+            @include respond-up(xs) {
+                right: 0;
+            }
+
+            @include respond-up(sm) {
+                right: -7px;
+            }
+
+            @include respond-up(lg) {
+                right: 0;
+            }
+        }
+    }
+
+    &__price {
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+
+        @include respond-up(sm) {
+            font-size: 28px;
+        }
+
+        &-unity {
+            font-size: 14px;
+            font-weight: 400;
+            @include respond-up(sm) {
+                font-size: 16px;
+            }
+        }
+
+        &-offer {
+            margin-bottom: 0;
+            color: $color-primary-lighter;
+            font-size: 16px;
+            @include respond-up(md) {
+                font-size: 20px;
+            }
+        }
+
+        &-normal {
+            margin-bottom: 0;
+            color: $color-primary-lighter;
+            font-size: 14px;
+            @include respond-up(md) {
+                font-size: 16px;
+            }
+        }
+
+        &--special {
+            color: $red;
+        }
+    }
+}
+
+.owl-carousel {
+
+    .owl-nav {
+        position: relative;
+        width: 100%;
+        @include respond-up(sm) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 640px;
+        }
+
+        @media (min-width: 825px) {
+            max-width: 695px;
+        }
+
+        @include respond-up(md) {
+            max-width: 860px;
+        }
+
+        @media (min-width: 1070px) {
+            max-width: 940px;
+        }
+
+        @include respond-up(lg) {
+            max-width: 1070px;
+        }
+
+        @media (min-width: 1300px) {
+            max-width: 1170px;
+        }
+
+        button.owl-next,
+        button.owl-prev {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            transition: all 0.3s linear;
+            color: $white;
+            border-radius: 50%;
+            background-color: $color-secondary;
+            font-size: 16px;
+            @include respond-up(sm) {
+                width: 42px;
+                height: 42px;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                font-size: 19px;
+            }
+
+            @include respond-up(md) {
+                width: 50px;
+                height: 50px;
+                font-size: 21px;
+            }
+
+            &:focus,
+            &:hover {
+                outline: none;
+                background-color: darken($color-secondary, 15%);
+                box-shadow: 0 1px 6px rgba($color-base, 0.3);
+            }
+        }
+
+        .owl-prev {
+            left: 0;
+            @include respond-up(sm) {
+                left: -65px;
+            }
+        }
+
+        .owl-next {
+            right: 0;
+            @include respond-up(sm) {
+                right: -65px;
+            }
+        }
+    }
+
+    .owl-dots {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 1;
+
+        .owl-dot {
+            outline: none;
+            line-height: 1;
+
+            span {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                transition: background-color 0.2s ease;
+                border-radius: 50%;
+                background-color: rgba($color-primary-lighter, 0.5);
+                @include respond-up(sm) {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+                @include respond-up(sm) {
+                    margin-right: 10px;
+                }
+            }
+
+            &.active,
+            &:hover {
+                span {
+                    background-color: $color-primary-lighter;
+                }
+            }
+        }
+    }
+}
+
+// Fix Shadow
+
+.owl-destacados, .owl-recomendados, .owl-relacionados {
+    .owl-stage-outer {
+        margin-top: -25px;
+    }
+}

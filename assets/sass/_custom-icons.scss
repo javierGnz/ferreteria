@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Custom Icons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/custom-icons.eot');
+    src: url('../fonts/custom-icons.eot') format('embedded-opentype'), url('../fonts/custom-icons.woff2') format('woff2'), url('../fonts/custom-icons.woff') format('woff'), url('../fonts/custom-icons.ttf') format('truetype'), url('../fonts/custom-icons.svg') format('svg');
+}
+
+[class^="fit-icon"],
+[class*="fit-icon"] {
+    display: inline-block;
+    font-family: 'Custom Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fit-icon-basket:before {
+    content: '\e800';
+}
+
+.fit-icon-location:before {
+    content: '\e801';
+}
+
+.fit-icon-cancel:before {
+    content: '\e802';
+}
+
+.fit-icon-stopwatch:before {
+    content: '\e803';
+}
+
+.fit-icon-user:before {
+    content: '\e804';
+}
+
+.fit-icon-plus:before {
+    content: '\e805';
+}
+
+.fit-icon-shop:before {
+    content: '\e806';
+}
+
+.fit-icon-minus:before {
+    content: '\e807';
+}
+
+.fit-icon-info:before {
+    content: '\e808';
+}
+
+.fit-icon-twitter:before {
+    content: '\f099';
+}
+
+.fit-icon-facebook:before {
+    content: '\f09a';
+}
+
+.fit-icon-mail-alt:before {
+    content: '\f0e0';
+}
+
+.fit-icon-angle-left:before {
+    content: '\f104';
+}
+
+.fit-icon-angle-right:before {
+    content: '\f105';
+}
+
+.fit-icon-angle-up:before {
+    content: '\f106';
+}
+
+.fit-icon-angle-down:before {
+    content: '\f107';
+}
+
+.fit-icon-instagram:before {
+    content: '\f16d';
+}

@@ -1,0 +1,252 @@
+.btn {
+    position: relative;
+    z-index: 1;
+    padding: 5px 28px;
+    @include respond-up(xs) {
+        padding: 7px 32px;
+    }
+    @include respond-up(md) {
+        padding: 9px 38px;
+    }
+
+    &:active, &.active {
+        box-shadow: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--square {
+        overflow: hidden;
+        padding: 4px 8px;
+        transition: color 0.3s, border-color 0.45s;
+        border-radius: 0;
+
+        &::after,
+        &::before {
+            position: absolute;
+            z-index: -1;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            transition: -webkit-transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1), -webkit-transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        &:focus,
+        &:hover {
+            &::after,
+            &::before {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            &::after {
+                transition-delay: 0.175s;
+            }
+        }
+    }
+
+    &--round {
+        overflow: hidden;
+        transition: color 0.3s, border-color 0.45s;
+        border-radius: 25px;
+
+        &::after,
+        &::before {
+            position: absolute;
+            z-index: -1;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            transition: -webkit-transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1), -webkit-transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        &:focus,
+        &:hover {
+            &::after,
+            &::before {
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            &::after {
+                transition-delay: 0.175s;
+            }
+        }
+    }
+
+    &--icon {
+        [class^="fit-icon"],
+        [class*="fit-icon"] {
+            position: relative;
+            right: -5px;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--link {
+        color: $color-base;
+        text-align: left;
+        padding: 5px 14px;
+        @include respond-up(xs) {
+            padding: 7px 18px;
+        }
+        @include respond-up(md) {
+            padding: 9px 24px;
+        }
+    }
+
+    &--go-next {
+        text-align: left;
+        padding: 5px 14px;
+        @include respond-up(xs) {
+            padding: 7px 18px;
+        }
+        @include respond-up(md) {
+            padding: 9px 24px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 14px;
+
+            @include respond-up(xs) {
+                right: 18px;
+            }
+            @include respond-up(md) {
+                right: 24px;
+            }
+        }
+    }
+
+    &--go-back {
+        text-align: left;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 14px;
+
+            @include respond-up(xs) {
+                left: 16px;
+            }
+            @include respond-up(md) {
+                left: 19px;
+            }
+        }
+    }
+
+    &--white-transparent {
+        color: $white;
+        background-color: rgba($white, 0.15);
+
+        &::before {
+            background-color: rgba($white, 0.5);
+        }
+
+        &::after {
+            background-color: rgba($white, 0.75);
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-base;
+            border-color: rgba($white, 0.75);
+        }
+    }
+
+    &--white-transparent-second {
+        color: $blue;
+        background-color: rgba($white, 0.5);
+
+        &::before {
+            background-color: rgba($white, 0.75);
+        }
+
+        &::after {
+            background-color: rgba($white, 0.9);
+        }
+
+        &:focus,
+        &:hover {
+            color: $blue;
+            border-color: rgba($white, 0.9);
+        }
+    }
+
+    &--primary {
+        color: $white;
+        background-color: $color-primary-lighter;
+
+        &::before {
+            background-color: lighten($red, 10%);
+        }
+
+        &::after {
+            background-color: $red;
+        }
+
+        &:focus,
+        &:hover {
+            color: $white;
+            border-color: $red;
+        }
+    }
+
+    &--secondary {
+        color: $color-base;
+        background-color: lighten($color-primary-lighter, 28%);
+
+        &::before {
+            background-color: lighten($color-primary-lighter, 24%);
+        }
+
+        &::after {
+            background-color: lighten($color-primary-lighter, 20%);
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-base;
+            border-color: lighten($color-primary-lighter, 20%);
+        }
+    }
+
+    &--red {
+        color: $white;
+        background-color: $red;
+
+        &::before {
+            background-color: rgba($white, 0.75);
+        }
+
+        &::after {
+            background-color: $white;
+        }
+
+        &:focus,
+        &:hover {
+            color: $red;
+            border-color: $red;
+        }
+    }
+}

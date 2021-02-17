@@ -1,0 +1,144 @@
+@-webkit-keyframes scrolling {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes scrolling {
+    0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes shrink-bounce {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    33% {
+        -webkit-transform: scale(.85);
+        transform: scale(.85);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes shrink-bounce {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    33% {
+        -webkit-transform: scale(.85);
+        transform: scale(.85);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes checkbox-check {
+    0% {
+        -webkit-transform: rotate(45deg) scale(0);
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+        border-color: $white;
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        border-color: $white;
+    }
+}
+@keyframes checkbox-check {
+    0% {
+        -webkit-transform: rotate(45deg) scale(0);
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+        border-color: $white;
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        border-color: $white;
+    }
+}
+@-webkit-keyframes radio-check {
+    0% {
+        -webkit-transform: rotate(45deg) scale(0);
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+        border-color: $cyan;
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        border-color: $cyan;
+    }
+}
+@keyframes radio-check {
+    0% {
+        -webkit-transform: rotate(45deg) scale(0);
+        transform: rotate(45deg) scale(0);
+        opacity: 0;
+        border-color: $cyan;
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        border-color: $cyan;
+    }
+}
+@-webkit-keyframes onload {
+    0% {
+        -webkit-transform: scale3d(1.05,1.05,1);
+        transform: scale3d(1.05,1.05,1);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes onload {
+    0% {
+        -webkit-transform: scale3d(1.05,1.05,1);
+        transform: scale3d(1.05,1.05,1);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
